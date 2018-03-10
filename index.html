@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="node_modules/browser-detect/dist/browser-detect.min.js"></script>
 </head>
 <body>
     <div id="root">Checking...</div>
@@ -19,22 +18,24 @@
         */
 
 
-        var result = browser();
-        var status = "<span style='color:red'>Fail</span>";
-        console.log(result);
-
-        if( (result.name==='chrome' && parseInt(result.version)>=30) ||
-            (result.name==='firefox' && parseInt(result.version)>=27) ||
-            (result.name==='ie' && parseInt(result.version)>=11) ||
-            (result.name==='safari' && parseInt(result.version)>=7) ||
-            (result.name==='safari mobile'  && parseInt(result.version)>=5)
-        ){
-            status = "<span style='color:green'>Pass</span>";
-
-        }
-
-        var root = document.getElementById('root');
-        root.innerHTML = '<p>' + JSON.stringify(result) + '</p>' + '<p> Status = ' + status + '</p>';
+//        var result = browser();
+//        var status = "<span style='color:red'>Fail</span>";
+//        console.log(result);
+//
+//        if( (result.name==='chrome' && parseInt(result.version)>=30) ||
+//            (result.name==='firefox' && parseInt(result.version)>=27) ||
+//            (result.name==='edge' && parseInt(result.version)>=11) ||
+//            (result.name==='ie' && parseInt(result.version)>=11) ||
+//            (result.name==='safari' && parseInt(result.version)>=7) ||
+//            (result.name==='safari mobile'  && parseInt(result.version)>=5)
+//        ){
+//            status = "<span style='color:green'>Pass</span>";
+//
+//        }
+//
+//        var root = document.getElementById('root');
+//        root.innerHTML = '<p>' + JSON.stringify(result) + '</p>' + '<p> Status = ' + status + '</p>';
 
     </script>
+    <script src="app.js"></script>
 </html>
